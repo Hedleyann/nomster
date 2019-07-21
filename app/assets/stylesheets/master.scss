@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
 @import "bootstrap";
 
 .booyah-box {
@@ -23,9 +24,7 @@ body {
 }
 
 .navbar-inverse .navbar-brand {
-  color: #E3E85A;
-  font-family: 'chunkfiveroman', sans-serif;
-  font-size:26px;
-  
+    color: #E3E85A;
+    font-family: 'chunkfiveroman', sans-serif;
+    font-size:26px;
 }
-
