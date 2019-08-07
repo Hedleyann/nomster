@@ -9,7 +9,7 @@ class PlacesController < ApplicationController
   end
 
   def create
-    c  @place = current_user.places.create(place_params)
+     @place = current_user.places.create(place_params)
   if @place.valid?
     redirect_to root_path
   else
@@ -40,7 +40,6 @@ class PlacesController < ApplicationController
   else
     render :edit, status: :unprocessable_entity
   end
-e
   end
   def destroy
     @place = Place.find(params[:id])
