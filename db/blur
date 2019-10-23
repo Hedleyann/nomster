@@ -1,0 +1,72 @@
+class Stack
+    attr_reader :data
+
+    def initialize
+        @data = nil
+    end
+
+    # Push a value onto the stack
+    def push(value)
+        # IMPLEMENT ME!
+    end
+
+    # Pop an item off the stack.
+    # Remove the last item that was pushed onto the
+    # stack and return the value to the user
+    def pop
+        # I RETURN A VALUE
+    end
+
+end
+
+
+
+
+
+
+
+
+
+
+
+def print_values(list_node)
+  if list_node
+    print "#{list_node.value} --> "
+    print_values(list_node.next_node)
+  else
+    print "nil\n"
+    return
+  end
+end
+
+node1 = LinkedListNode.new(37)
+node2 = LinkedListNode.new(99, node1)
+node3 = LinkedListNode.new(12, node2)
+
+print_values(node3)
+
+
+
+/**
+ * Definition for singly-linked list.
+ * Public class ListNode {
+ *  int val;
+ *  ListNode next;
+ *  ListNode(int x) { val = x; }
+ * }
+ */
+*   class solution {
+* public ListNode reversalList(ListNode head) {
+    Stack<ListNode> stack = new Stack<ListNode>();
+    while(head !=null) {
+      stack.push(head);
+      head = head.next;
+      
+    }
+    ListNode dummy = new ListNode(-1);
+    head = dummy;
+    while(stack.isEmpty()) {
+      ListNode current = stack.pop();
+      head.next = new ListNode(current.val);
+      head = head.next;
+    }
